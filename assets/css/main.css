@@ -79,6 +79,7 @@
 			animation: none !important;
 		}
 
+		
 	a {
 		-moz-transition: border-color 0.2s ease-in-out;
 		-webkit-transition: border-color 0.2s ease-in-out;
@@ -92,6 +93,17 @@
 
 		a:hover {
 			border-color: transparent;
+		}
+
+	body.video {
+ 			 position: fixed;
+ 			 top: 50%; left: 50%;
+ 			 z-index: 1;
+ 			 min-width: 100%;
+ 			 min-height: 100%;
+ 			 width: auto;
+ 			 height: auto;
+ 			 transform: translate(-50%, -50%);
 		}
 
 /* Icon */
@@ -163,6 +175,7 @@
 		animation: wrapper 3s forwards;
 		height: 100%;
 		left: 0;
+		right: 0;
 		opacity: 0;
 		position: fixed;
 		top: 0;
@@ -172,10 +185,10 @@
 /* BG */
 
 	#bg {
-		-moz-animation: bg 60s linear infinite;
-		-webkit-animation: bg 60s linear infinite;
-		-ms-animation: bg 60s linear infinite;
-		animation: bg 60s linear infinite;
+		-moz-animation: bg 0s linear infinite;
+		-webkit-animation: bg 0s linear infinite;
+		-ms-animation: bg 0s linear infinite;
+		animation: bg 0s linear infinite;
 		-moz-backface-visibility: hidden;
 		-webkit-backface-visibility: hidden;
 		-ms-backface-visibility: hidden;
@@ -186,9 +199,11 @@
 		transform: translate3d(0,0,0);
 	/* Set your background with this */
 
-		background: #348cb2 url("images/bg.jpg") bottom left;
-		background-repeat: repeat-x;
+		background: #348cb2 url("media/earthedge.jpg") top left;
+		background-repeat: no-repeat;
+		background-size: cover;
 		height: 100%;
+		width: 100%;
 		left: 0;
 		opacity: 1;
 		position: fixed;
@@ -509,7 +524,7 @@
 		position: relative;
 		text-align: center;
 		top: -1em;
-		vertical-align: middle;
+		vertical-align: bottom +25px;
 		width: 90%;
 	}
 
